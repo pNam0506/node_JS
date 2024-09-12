@@ -4,7 +4,7 @@ const debug = require('debug')('app') //ดูว่าเกิดเหตุ�
 const morgan = require('morgan') // ดูว่าอุปกรณ์ไหนเข้ามาทำอะไร
 
 const app = express()
-const port = 3080;
+const port = 4000;
 
 app.use(morgan('combined'))
 
