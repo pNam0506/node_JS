@@ -4,14 +4,14 @@ const debug = require('debug')('app') //ดูว่าเกิดเหตุ�
 const morgan = require('morgan') // ดูว่าอุปกรณ์ไหนเข้ามาทำอะไร
 const path = require('path')
 const app = express()
-const port = 4000;
+const port = 4800;
 
 app.use(morgan('combined'))
 app.use(express.static(path.join(__dirname,"/public/")))
 
 app.get("/",(req,res)=>{
 
-    res.send('Hello Pinmanee')
+    res.send('Hello')
 
 
 })
