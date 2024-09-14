@@ -2,12 +2,15 @@ const express = require('express')
 // const chalk = require('chalk') change color
 const debug = require('debug')('app') //ดูว่าเกิดเหตุการณ์อะไรขึ้นบ้าง
 const morgan = require('morgan') // ดูว่าอุปกรณ์ไหนเข้ามาทำอะไร
+const path = require('path')
+
+
 
 const app = express()
 const port = 4000;
 
 app.use(morgan('combined'))
-
+app.use(express.static(path.join(__dirname,"/public/")))
 
 app.get("/",(req,res)=>{
 
