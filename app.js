@@ -4,7 +4,7 @@ const debug = require('debug')('app') //ดูว่าเกิดเหตุ�
 const morgan = require('morgan') // ดูว่าอุปกรณ์ไหนเข้ามาทำอะไร
 const path = require('path'); // Change this line
 const app = express()
-const port = 4800;
+const port = 4500;
 
 app.use(morgan('combined'))
 app.use(express.static(path.join(__dirname, 'public')));
@@ -18,5 +18,5 @@ app.get("/",(req,res)=>{
 
 app.listen(port, () =>{
     // console.log('listening on port ' + port)
-    debug('listening on port ' + port)
+    console.log('listening on port ' + port)
 })
