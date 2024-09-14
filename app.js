@@ -3,9 +3,6 @@ const express = require('express')
 const debug = require('debug')('app') //ดูว่าเกิดเหตุการณ์อะไรขึ้นบ้าง
 const morgan = require('morgan') // ดูว่าอุปกรณ์ไหนเข้ามาทำอะไร
 const path = require('path')
-
-
-
 const app = express()
 const port = 4000;
 
@@ -14,7 +11,7 @@ app.use(express.static(path.join(__dirname,"/public/")))
 
 app.get("/",(req,res)=>{
 
-    res.send('Hello Pinmanee')
+    // res.send('Hello Pinmanee')
 
 
 })
