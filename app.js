@@ -9,12 +9,12 @@ const port = 4800;
 app.use(morgan('combined'));
 
 // Serving static files from the 'public' folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public/')));
 
 // Route for the root URL
 app.get("/", (req, res) => {
     // The static middleware will handle serving the HTML file
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.send('ยังเข้าไม่ถึงจ้า ;-;')
 });
 
 // Start the server
